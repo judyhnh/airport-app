@@ -53,13 +53,13 @@ public IActionResult GetAirport([FromBody] AirportRequest request)
 
 private List<Airport> LoadAirports()
 {
-    var json = System.IO.File.ReadAllText("../../Airports/airports.json");
+    var json = System.IO.File.ReadAllText("../Airports/airports.json");
     return JsonConvert.DeserializeObject<List<Airport>>(json);
 }
 
 private List<AirportTimezone> LoadAirportTimezones()
 {
-    var json = System.IO.File.ReadAllText("../../Timezones/timezones.json");
+    var json = System.IO.File.ReadAllText("../Timezones/timezones.json");
     return JsonConvert.DeserializeObject<List<AirportTimezone>>(json);
 }
 
